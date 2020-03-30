@@ -1,15 +1,13 @@
-'use strict';
-
 function stringSplitter(str, separator='/') {
-  if(char === '/'){
-    return arr= ...arr + 
-  }
-  if(){
-    
+  if(str.length === 0){
+    return [''];
   }
 
-  const char = str[0]
-  return char + stringSplitter(str.slice(1))
+  const char = str[0];
+  if(char === separator){
+    return ['', ...stringSplitter(str.slice(1))];
+  }
+  return [char + stringSplitter(str.slice(1))[0]];
 }
 
-stringSplitter('02/20/2020')
+console.log(stringSplitter('02/20/2020'));
