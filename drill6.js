@@ -1,3 +1,4 @@
+/* eslint-disable strict */
 function fibonacci(n, fibSeq = []) {
   if(fibSeq.length === n) {
     return fibSeq;
