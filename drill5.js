@@ -9,7 +9,7 @@ function stringSplitter(str, separator='/') {
   }
   const newArray = stringSplitter(str.slice(1));
   newArray[0] = char + newArray[0];
-  return [...newArray];
+  return newArray;
 }
 
 console.log(stringSplitter('02/20/2020'));
